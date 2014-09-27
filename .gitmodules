@@ -1,0 +1,9 @@
+[submodule "modules/common"]
+	path = modules/common
+	url = git://github.com/magnocosta/puppet-common.git
+[submodule "modules/mysql"]
+	path = modules/mysql
+	url = git://github.com/magnocosta/puppet-mysql.git
+[submodule "modules/ruby"]
+	path = modules/ruby
+	url = git://github.com/magnocosta/puppet-ruby.git
