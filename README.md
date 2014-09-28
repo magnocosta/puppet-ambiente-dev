@@ -13,7 +13,7 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 ####Iniciando Máquinas Virtuais
   Para criar sua máquina virtual:
     <pre>
-      $ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev
+      $ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev.git
       $ cd puppet-ambiente-dev
       $ vagrant up
     </pre>
