@@ -45,21 +45,25 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 
   Acesse a pasta apps e crie o seu projeto rails com o comando:
   <pre>
-  rails new teste
+    rails new teste
   </pre>
   
   Na pasta Root acesse a maquina via ssh com o comando abaixo:
   <pre>
-  vagrant ssh
+    vagrant ssh
   </pre>
   
   Altere a senha do usuario admin com o comando abaixo:
-    >sudo passwd admin
+  <pre>
+    sudo passwd admin
+  </pre>
 
   Utilize esse usuario para traalhar na máquina com o comando abaixo:
-    >su admin
-    >// digite sua senha e depois
-    >bash --login
+  <pre>
+    su admin
+    // digite sua senha e depois
+    bash --login
+  </pre>
   
   Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto sera sincronizado entre seu PC e a maquina virtual é "/var/ruby_apps" sendo assim tudo que voce colocar na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta ruby_apps.
   
