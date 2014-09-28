@@ -10,21 +10,23 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
 
-####Máquinas disponíveis
-  * DEV_RAILS
+####Iniciando Máquinas Virtuais
+  Para criar sua máquina virtual:
+    <pre>
+      $ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev
+      $ cd puppet-ambiente-dev
+      $ vagrant up
+    </pre>
+    
+    Para inciar uma maquina apenas utilize:
+    <pre>
+      $ vagrant up ${nome_da_maquina}
+    </pre>
+    
+    A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
 
 ####Máquinas disponíveis
-Para criar sua máquina virtual:
-<pre>
-$ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev
-$ cd puppet-ambiente-dev
-$ vagrant up
-</pre>
-Para inciar uma maquina apenas utilize:
-<pre>
-$ vagrant up ${nome_da_maquina}
-</pre>
-A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.   
+  * DEV_RAILS
 
 ####DEV_RAILS
   Essa maquina vem com os itens abaixo configurados e prontos para serem utilizados:
