@@ -45,12 +45,12 @@ Com o projeto Vagrant criado na estrutura abaixo:
   |--Vagrantfile
 </pre>
 
-Acesse a pasta apps e crie o seu projeto rails com o comando:
+Acesse a pasta *'apps'* e crie o seu projeto rails com o comando:
 <pre>
 $ rails new teste
 </pre>
   
-Na pasta Root acesse a máquina via ssh com o comando abaixo:
+Na pasta *'Root'* acesse a máquina via ssh com o comando abaixo:
 <pre>
 $ vagrant ssh
 </pre>
@@ -67,7 +67,7 @@ $ su admin
 $ bash --login
 </pre>
   
-Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto será sincronizado entre seu PC e a máquina virtual é '/var/ruby_apps', sendo assim tudo que for colocado na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta 'ruby_apps'.
+Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto será sincronizado entre seu PC e a máquina virtual é *'/var/ruby_apps'*, sendo assim tudo que for colocado na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta *'ruby_apps'*.
   
 Dica: Se você pretende utilizar essa máquina para o desenvolvimento de vários projetos rails é legal criar uma gemset para isolar as bibliotecas que serão utilizadas em cada projeto, evitando assim conflitos chatos de serem resolvidos. 
   
