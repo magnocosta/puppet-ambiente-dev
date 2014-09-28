@@ -17,12 +17,10 @@ Um simples script Puppet para a instalação e configuração de um servidor com
       $ cd puppet-ambiente-dev
       $ vagrant up
     </pre>
-    
   Para inciar uma maquina apenas utilize:
     <pre>
       $ vagrant up ${nome_da_maquina}
     </pre>
-    
   A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
 
 ####Máquinas disponíveis
