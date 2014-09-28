@@ -19,9 +19,9 @@ Um simples script Puppet para a instalação e configuração de um servidor com
   * Mysql;
   * RVM;
   * Versão do Ruby "ruby-2.0.0-p247";
-  * Usuário "admin"
+  * Usuário "admin";
   
-  Com o projeto Vagrant criado com a estrutura abaixo:
+  Com o projeto Vagrant criado na estrutura abaixo:
     <pre>
     |--Root
         |--manifests
