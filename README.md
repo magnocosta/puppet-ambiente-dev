@@ -13,6 +13,19 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 ## Máquinas disponíveis
   * DEV_RAILS
 
+## Iniciando sua máquina virtual
+
+    Para criar sua máquina virtual:
+
+    host $ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev
+    host $ cd puppet-ambiente-dev
+    host $ vagrant up
+
+    Para inciar uma maquina apenas utilize:
+    host $ vagrant up ${nome_da_maquina}
+    
+    A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.   
+
 ## DEV_RAILS
   Essa maquina vem com os itens abaixo configurados e prontos para serem utilizados:
   
@@ -23,7 +36,7 @@ Um simples script Puppet para a instalação e configuração de um servidor com
   
   Com o projeto Vagrant criado na estrutura abaixo:
     <pre>
-    |--Root
+      |--Root
         |--manifests
         |--modules
         |--apps
@@ -31,10 +44,10 @@ Um simples script Puppet para a instalação e configuração de um servidor com
     </pre>
 
   Acesse a pasta apps e crie o seu projeto rails com o comando:
-    rails new teste
+  rails new teste;
 
   Na pasta Root acesse a maquina via ssh com o comando abaixo:
-    vagrant ssh
+    vagrant ssh;
   
   Altere a senha do usuario admin com o comando abaixo:
     sudo passwd admin
@@ -50,18 +63,6 @@ Um simples script Puppet para a instalação e configuração de um servidor com
   
   Dica: Caso algum passo acima falhe destrua sua maquina virtual e comece tudo novamente.
   
-## Iniciando sua máquina virtual
-
-    Para criar sua máquina virtual:
-
-    host $ git clone --recursive https://github.com/magnocosta/ambienteTomcatMysql
-    host $ cd ambienteTomcatMysql
-    host $ vagrant up
-
-    Para inciar uma maquina apenas utilize:
-    host $ vagrant up ${nome_da_maquina}
-    
-    A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.      
   
 ## Virtual Machine Management
 
