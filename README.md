@@ -69,9 +69,9 @@ $ bash --login
   
 Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto será sincronizado entre seu PC e a máquina virtual é *'/var/ruby_apps'*, sendo assim tudo que for colocado na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta *'ruby_apps'*.
   
-Dica: Se você pretende utilizar essa máquina para o desenvolvimento de vários projetos rails é legal criar uma gemset para isolar as bibliotecas que serão utilizadas em cada projeto, evitando assim conflitos chatos de serem resolvidos. 
-  
-Dica: Caso algum passo acima falhe destrua sua maquina virtual e comece tudo novamente.
+**Dica:** Se você pretende utilizar essa máquina para o desenvolvimento de vários projetos rails é legal criar uma gemset para isolar as bibliotecas que serão utilizadas em cada projeto, evitando assim conflitos chatos de serem resolvidos. 
+
+**Dica:** Caso algum passo acima falhe destrua sua maquina virtual e comece tudo novamente.
   
   
 ####Virtual Machine Management
