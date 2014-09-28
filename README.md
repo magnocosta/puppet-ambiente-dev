@@ -1,4 +1,4 @@
-puppet-ambiente-dev
+Puppet Ambiente Dev
 ===================
 Um simples script Puppet para a instalação e configuração de um servidor completo para desenvolvimento de aplicacoes.
 
@@ -10,8 +10,45 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
 
-####Máquinas disponíveis
-  * dev_rails
+## Máquinas disponíveis
+  * DEV_RAILS
+
+## DEV_RAILS
+  Essa maquina vem com os itens abaixo configurados e prontos para serem utilizados:
+  
+  * Mysql;
+  * RVM;
+  * Versão do Ruby "ruby-2.0.0-p247";
+  * Usuário "admin"
+  
+  Com o projeto Vagrant criado com a estrutura abaixo:
+    <pre>
+    |--Root
+        |--manifests
+        |--modules
+        |--apps
+        |--Vagrantfile
+    </pre>
+
+  Acesse a pasta apps e crie o seu projeto rails com o comando:
+    rails new teste
+
+  Na pasta Root acesse a maquina via ssh com o comando abaixo:
+    vagrant ssh
+  
+  Altere a senha do usuario admin com o comando abaixo:
+    sudo passwd admin
+
+  Utilize esse usuario para traalhar na máquina com o comando abaixo:
+    su admin
+    // digite sua senha e depois
+    bash --login
+  
+  Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto sera sincronizado entre seu PC e a maquina virtual é "/var/ruby_apps" sendo assim tudo que voce colocar na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta ruby_apps.
+  
+  Dica: Se você pretende utilizar essa máquina para o desenvolvimento de vários projetos rails é legal criar uma gemset para isolar as bibliotecas que serão utilizadas em cada projeto, evitando assim conflitos chatos de serem resolvidos. 
+  
+  Dica: Caso algum passo acima falhe destrua sua maquina virtual e comece tudo novamente.
   
 ## Iniciando sua máquina virtual
 
