@@ -5,15 +5,15 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 ####O que ele faz?
   Esse script cria varias maquinas virtuais utilizando o Vagrant e o Puppet para criação e provisionamento das máquinas criando um ambiente completo e isolado para o desenvolvimento de aplicações.
 
-## Pré-requisitos
+#### Pré-requisitos
 
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
 
-## Máquinas disponíveis
+####Máquinas disponíveis
   * DEV_RAILS
 
-## Iniciando sua máquina virtual
+####Iniciando sua máquina virtual
 
     Para criar sua máquina virtual:
 
@@ -26,7 +26,7 @@ Um simples script Puppet para a instalação e configuração de um servidor com
     
     A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.   
 
-## DEV_RAILS
+####DEV_RAILS
   Essa maquina vem com os itens abaixo configurados e prontos para serem utilizados:
   
   * Mysql;
@@ -44,18 +44,22 @@ Um simples script Puppet para a instalação e configuração de um servidor com
     </pre>
 
   Acesse a pasta apps e crie o seu projeto rails com o comando:
-  rails new teste;
-
+  <pre>
+  rails new teste
+  </pre>
+  
   Na pasta Root acesse a maquina via ssh com o comando abaixo:
-    vagrant ssh;
+  <pre>
+  vagrant ssh
+  </pre>
   
   Altere a senha do usuario admin com o comando abaixo:
-    sudo passwd admin
+    >sudo passwd admin
 
   Utilize esse usuario para traalhar na máquina com o comando abaixo:
-    su admin
-    // digite sua senha e depois
-    bash --login
+    >su admin
+    >// digite sua senha e depois
+    >bash --login
   
   Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto sera sincronizado entre seu PC e a maquina virtual é "/var/ruby_apps" sendo assim tudo que voce colocar na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta ruby_apps.
   
@@ -64,7 +68,7 @@ Um simples script Puppet para a instalação e configuração de um servidor com
   Dica: Caso algum passo acima falhe destrua sua maquina virtual e comece tudo novamente.
   
   
-## Virtual Machine Management
+####Virtual Machine Management
 
     Para suspender a utilização de sua máquina virtual:
     host $ vagrant suspend
