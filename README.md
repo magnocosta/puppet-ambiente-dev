@@ -62,9 +62,9 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 
   Utilize esse usuario para traalhar na máquina com o comando abaixo:
   <pre>
-    host $ su admin
-    #digite sua senha e depois
-    host $ bash --login
+    $ su admin
+    //Digite sua senha e depois
+    $ bash --login
   </pre>
   
   Pronto sua máquina esta pronta para o desenvolvimento, a pasta onde seu projeto sera sincronizado entre seu PC e a maquina virtual é "/var/ruby_apps" sendo assim tudo que voce colocar na pasta apps citada anteriormente será sincronizada automaticamente pelo Vagrant na pasta ruby_apps.
@@ -75,23 +75,34 @@ Um simples script Puppet para a instalação e configuração de um servidor com
   
   
 ####Virtual Machine Management
-
-    Para suspender a utilização de sua máquina virtual:
+  Para suspender a utilização de sua máquina virtual:
+  <pre>
     $ vagrant suspend
-
-    Para continuar utilizando sua máquina virtual:
+  </pre>
+  
+  Para continuar utilizando sua máquina virtual:
+  <pre>
     $ vagrant resume
-
-    Para desligar sua máquina virtual:
+  </pre>
+  
+  Para desligar sua máquina virtual:
+  <pre>
     $ vagrant halt
-
-    Para ligar sua máquina virtual:
+  </pre>
+  
+  Para ligar sua máquina virtual:
+  <pre>
     $ vagrant up
+  </pre>
 
-    Você pode checar o estado de sua máquina virtual com:
+  Você pode checar o estado de sua máquina virtual com:
+  <pre>
     $ vagrant status
-
-    Para destruir completamente sua máquina virtual (Cuidado!):
+  </pre>
+  
+  Para destruir completamente sua máquina virtual (Cuidado!):
+  <pre>
     $ vagrant destroy
-
-    Para mais informações [Vagrant documentation](http://vagrantup.com/v1/docs/index.html).
+  </pre>
+  
+  Para mais informações [Vagrant documentation](http://vagrantup.com/v1/docs/index.html).
