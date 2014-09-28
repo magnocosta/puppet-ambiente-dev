@@ -3,7 +3,7 @@ Puppet Ambiente Dev
 Um simples script Puppet para a instalação e configuração de um servidor completo para desenvolvimento de aplicacoes.
 
 ####O que ele faz?
-Esse script cria varias maquinas virtuais utilizando o Vagrant e o Puppet para criação e provisionamento das máquinas criando um ambiente completo e isolado para o desenvolvimento de aplicações.
+Esse script cria varias maquinas virtuais utilizando o Vagrant e o Puppet para criação e provisionamento das máquinas simulando um ambiente completo e isolado para o desenvolvimento de aplicações.
 
 #### Pré-requisitos
 
