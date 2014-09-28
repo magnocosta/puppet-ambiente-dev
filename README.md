@@ -3,7 +3,7 @@ Puppet Ambiente Dev
 Um simples script Puppet para a instalação e configuração de um servidor completo para desenvolvimento de aplicacoes.
 
 ####O que ele faz?
-  Esse script cria varias maquinas virtuais utilizando o Vagrant e o Puppet para criação e provisionamento das máquinas criando um ambiente completo e isolado para o desenvolvimento de aplicações.
+Esse script cria varias maquinas virtuais utilizando o Vagrant e o Puppet para criação e provisionamento das máquinas criando um ambiente completo e isolado para o desenvolvimento de aplicações.
 
 #### Pré-requisitos
 
@@ -11,38 +11,41 @@ Um simples script Puppet para a instalação e configuração de um servidor com
 * [Vagrant](http://vagrantup.com)
 
 ####Iniciando Máquinas Virtuais
-  Para criar sua máquina virtual:
-    <pre>
-    $ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev.git
-    $ cd puppet-ambiente-dev
-    $ vagrant up</pre>
-  Para inciar uma maquina apenas utilize:
-    <pre>
-      $ vagrant up ${nome_da_maquina}
-    </pre>
-  A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
+Para criar sua máquina virtual:
+<pre>
+$ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev.git
+$ cd puppet-ambiente-dev
+$ vagrant up
+</pre>
+
+Para inciar uma maquina apenas utilize:
+<pre>
+$ vagrant up ${nome_da_maquina}
+</pre>
+
+A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
 
 ####Máquinas disponíveis
-  * DEV_RAILS
+* DEV_RAILS
 
 ####DEV_RAILS
-  Essa maquina vem com os itens abaixo configurados e prontos para serem utilizados:
+Essa maquina vem com os itens abaixo configurados e prontos para serem utilizados:
   
-  * Mysql;
-  * RVM;
-  * Versão do Ruby "ruby-2.0.0-p247";
-  * Usuário "admin";
+* Mysql;
+* RVM;
+* Versão do Ruby "ruby-2.0.0-p247";
+* Usuário "admin";
   
-  Com o projeto Vagrant criado na estrutura abaixo:
-    <pre>
-      |--Root
-        |--manifests
-        |--modules
-        |--apps
-        |--Vagrantfile
-    </pre>
+Com o projeto Vagrant criado na estrutura abaixo:
+<pre>
+|--Root
+|--manifests
+|--modules
+|--apps
+|--Vagrantfile
+</pre>
 
-  Acesse a pasta apps e crie o seu projeto rails com o comando:
+Acesse a pasta apps e crie o seu projeto rails com o comando:
   <pre>
     $ rails new teste
   </pre>
