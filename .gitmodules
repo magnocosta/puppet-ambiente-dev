@@ -10,3 +10,9 @@
 [submodule "modules/java"]
 	path = modules/java
 	url = git://github.com/magnocosta/puppet-java-7.git
+[submodule "modules/mongodb"]
+	path = modules/mongodb
+	url = git@github.com:magnocosta/puppet-mongodb.git
+[submodule "modules/redis"]
+	path = modules/redis
+	url = git@github.com:magnocosta/puppet-redis

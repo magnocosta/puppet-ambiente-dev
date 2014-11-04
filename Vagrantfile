@@ -24,8 +24,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         end
     end
    
+   config.vm.define :dev_preadly do |dev_preadly_config|
+        dev_preadly_config.vm.network :private_network, :ip => "192.168.33.11"
+        dev_preadly_config.vm.synced_folder 'apps', '/var/ruby_apps', nfs: true
+        dev_preadly_config.vm.network "forwarded_port", guest: 3000, host: 3000
+        dev_preadly_config.vm.provision "puppet" do |puppet|
+            puppet.module_path = "modules"
+            puppet.manifest_file = "dev_preadly_server.pp"
+        end
+   end
+
    config.vm.define :dev_java do |dev_java_config|
-        dev_java_config.vm.network :private_network, :ip => "192.168.33.11"
+        dev_java_config.vm.network :private_network, :ip => "192.168.33.12"
     
         dev_java_config.vm.provision "puppet" do |puppet|
             puppet.module_path = "modules"
