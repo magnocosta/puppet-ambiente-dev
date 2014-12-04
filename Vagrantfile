@@ -24,7 +24,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    
   config.vm.define :dev_java do |dev_java_config|
     dev_java_config.vm.network :private_network, :ip => "192.168.33.11"
-    
     dev_java_config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_java_server.pp"
