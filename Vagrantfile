@@ -11,31 +11,40 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    # thanks: http://jeremykendall.net/2013/08/09/vagrant-synced-folders-permissions/
   
+  config.vm.define :dev_preadly do |config|
+    config.vm.network :private_network, :ip => "192.168.33.13"
+    config.vm.synced_folder 'apps_preadly', '/var/apps_preadly', nfs: true
+    config.vm.network "forwarded_port", guest: 3000, host: 3000
+    config.vm.provision "puppet" do |puppet|
+      puppet.module_path = "modules"
+      puppet.manifest_file = "dev_preadly_server.pp"
+    end
+  end
+  
   config.vm.define :dev_rails do |dev_rails_config|
-    dev_rails_config.vm.network :private_network, :ip => "192.168.33.10"
-    dev_rails_config.vm.synced_folder 'apps_ruby', '/var/ruby_apps', nfs: true
-    dev_rails_config.vm.network "forwarded_port", guest: 3000, host: 3000
+    config.vm.network :private_network, :ip => "192.168.33.10"
+    config.vm.synced_folder 'apps_ruby', '/var/apps_ruby', nfs: true
+    config.vm.network "forwarded_port", guest: 3000, host: 3000
     
-    dev_rails_config.vm.provision "puppet" do |puppet|
+    config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_rails_server.pp"
     end
   end
    
-  config.vm.define :dev_java do |dev_java_config|
-    dev_java_config.vm.network :private_network, :ip => "192.168.33.11"
-    dev_java_config.vm.provision "puppet" do |puppet|
+  config.vm.define :dev_java do |config|
+    config.vm.network :private_network, :ip => "192.168.33.11"
+    config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_java_server.pp"
     end
   end
    
-  config.vm.define :dev_php do |dev_php_config|
-    dev_php_config.vm.network :private_network, :ip => "192.168.33.12"
-    dev_php_config.vm.synced_folder 'apps_php', '/var/www', nfs: true
-    dev_php_config.vm.network "forwarded_port", guest: 80, host: 80
-   
-    dev_php_config.vm.provision "puppet" do |puppet|
+  config.vm.define :dev_php do |config|
+    config.vm.network :private_network, :ip => "192.168.33.12"
+    config.vm.synced_folder 'apps_php', '/var/www', nfs: true
+    config.vm.network "forwarded_port", guest: 80, host: 80
+    config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_php_server.pp"
     end

@@ -3,7 +3,7 @@
 
 include common::basic
 include ruby::install
-include mongodb::install
+# include mongodb::install
 include redis::install
 
 exec {'add_group_rvm_in_user_admin':
