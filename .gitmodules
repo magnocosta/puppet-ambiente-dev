@@ -13,3 +13,6 @@
 [submodule "modules/redis"]
 	path = modules/redis
 	url = git@github.com:magnocosta/puppet-redis.git
+[submodule "modules/mongodb"]
+	path = modules/mongodb
+	url = git@github.com:magnocosta/puppet-mongodb.git
