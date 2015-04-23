@@ -27,36 +27,6 @@ A primeira vez que o comando é executado pode levar alguns minutos para conclui
 
 ####Máquinas disponíveis
 * DEV_RAILS
+* DEV_PREADLY
 
-####Virtual Machine Management
-Para suspender a utilização de sua máquina virtual:
-<pre>
-$ vagrant suspend
-</pre>
-  
-Para continuar utilizando sua máquina virtual:
-<pre>
-$ vagrant resume
-</pre>
-  
-Para desligar sua máquina virtual:
-<pre>
-$ vagrant halt
-</pre>
-  
-Para ligar sua máquina virtual:
-<pre>
-$ vagrant up
-</pre>
-
-Você pode checar o estado de sua máquina virtual com:
-<pre>
-$ vagrant status
-</pre>
-  
-Para destruir completamente sua máquina virtual (Cuidado!):
-<pre>
-$ vagrant destroy
-</pre>
-  
 Para mais informações [Vagrant documentation](http://vagrantup.com/v1/docs/index.html).
