@@ -26,7 +26,7 @@ $ vagrant up ${nome_da_maquina}
 A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
 
 ####Máquinas disponíveis
-* [DEV_RAILS] [https://github.com/magnocosta/puppet-ambiente-dev/wiki/DEV_RAILS]
-* [DEV_PREADLY] [https://github.com/magnocosta/puppet-ambiente-dev/wiki/DEV_PREADLY]
+* [DEV_RAILS] (https://github.com/magnocosta/puppet-ambiente-dev/wiki/DEV_RAILS)
+* [DEV_PREADLY] (https://github.com/magnocosta/puppet-ambiente-dev/wiki/DEV_PREADLY)
 
 Para mais informações [Vagrant documentation](http://vagrantup.com/v1/docs/index.html).
