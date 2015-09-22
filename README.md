@@ -1,16 +1,16 @@
 Puppet Ambiente Dev
 ===================
-Um simples script Puppet para a instalação e configuração de um servidor completo para desenvolvimento de aplicações.
+A simple script puppet for install and configure a full server for development.
 
-####O que ele faz?
-Esse script cria várias máquinas virtuais utilizando o Vagrant e o Puppet para criação e provisionamento, simulando um ambiente completo e isolado para o desenvolvimento de aplicações.
+#### What does he do?
+This script create a virtual machine using Vagrant and puppet as creation and provision, emulation a complete enviroment for development
 
 #### Pré-requisitos
 
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://vagrantup.com)
 
-####Iniciando Máquinas Virtuais
+#### Start your Virtual Machine
 Para criar sua máquina virtual:
 <pre>
 $ git clone --recursive https://github.com/magnocosta/puppet-ambiente-dev.git
@@ -20,13 +20,21 @@ $ vagrant up
 
 Para inciar uma máquina apenas utilize:
 <pre>
-$ vagrant up ${nome_da_maquina}
+$ vagrant up dev_server
 </pre>
 
-A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
+#### What are there on the box?
+- Mysql
+- Ngnx
+- Rvm
+- Postgresql
+- MongoDB
+- Redis
+- Git
+- Curl
+- Vim
+- User Admin
 
-####Máquinas disponíveis
-* [DEV_RAILS] (https://github.com/magnocosta/puppet-ambiente-dev/wiki/DEV_RAILS)
-* [DEV_PREADLY] (https://github.com/magnocosta/puppet-ambiente-dev/wiki/DEV_PREADLY)
+A primeira vez que o comando é executado pode levar alguns minutos para concluir do download do Box.
 
 Para mais informações [Vagrant documentation](http://vagrantup.com/v1/docs/index.html).
