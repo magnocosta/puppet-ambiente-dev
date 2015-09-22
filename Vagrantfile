@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :dev_preadly do |config|
     config.vm.network :private_network, :ip => "192.168.33.13"
     config.vm.synced_folder 'apps_preadly', '/var/apps_preadly', nfs: true
-    config.vm.network "forwarded_port", guest: 3000, host: 3000
+    config.vm.network "forwarded_port", guest: 3000, host: 3000  #http server
     config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_preadly_server.pp"
@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :dev_rails do |dev_rails_config|
     config.vm.network :private_network, :ip => "192.168.33.10"
     config.vm.synced_folder 'apps_ruby', '/var/apps_ruby', nfs: true
-    config.vm.network "forwarded_port", guest: 3000, host: 3000
+    config.vm.network "forwarded_port", guest: 3000, host: 3000 # http server
     
     config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
@@ -37,18 +37,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
    
-  config.vm.define :dev_java do |config|
-    config.vm.network :private_network, :ip => "192.168.33.11"
-    config.vm.provision "puppet" do |puppet|
-      puppet.module_path = "modules"
-      puppet.manifest_file = "dev_java_server.pp"
-    end
-  end
-   
   config.vm.define :dev_php do |config|
     config.vm.network :private_network, :ip => "192.168.33.12"
     config.vm.synced_folder 'apps_php', '/var/www', nfs: true
-    config.vm.network "forwarded_port", guest: 80, host: 80
+    config.vm.network "forwarded_port", guest: 80, host: 80     # http server
+    config.vm.network "forwarded_port", guest: 3306, host: 3306 # mysql
     config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_php_server.pp"
