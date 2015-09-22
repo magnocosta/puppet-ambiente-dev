@@ -16,3 +16,9 @@
 [submodule "modules/mongodb"]
 	path = modules/mongodb
 	url = git@github.com:magnocosta/puppet-mongodb.git
+[submodule "modules/postgresql"]
+	path = modules/postgresql
+	url = https://github.com/magnocosta/puppet-postgresql
+[submodule "modules/nginx"]
+	path = modules/nginx
+	url = https://github.com/magnocosta/puppet-nginx
