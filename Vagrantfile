@@ -22,14 +22,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define :dev_preadly do |config|
     config.vm.network :private_network, :ip => "192.168.33.13"
-    config.vm.synced_folder 'apps_preadly', '/var/apps_preadly', nfs: true
-    config.vm.network :forwarded_port, guest: 27017, host: 27017 #mongodb
+    config.vm.synced_folder 'apps_preadly', '/var/apps', nfs: true
+    config.vm.network :forwarded_port, guest: 27017, host: 27017  #mongodb
     config.vm.network :forwarded_port, guest: 3000,  host: 3000   #rails
     config.vm.network :forwarded_port, guest: 80,    host: 8080   #apache
     config.vm.network :forwarded_port, guest: 3306,  host: 3306   #mysql
     config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
-      puppet.manifest_file = "dev_preadly_server.pp"
+      puppet.manifest_file = "dev_server.pp"
     end
   end
   
