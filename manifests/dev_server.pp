@@ -6,6 +6,8 @@ include ruby::install
 include mongodb::install
 include redis::install
 include mysql::server
+include nginx::install
+include postgresql::install
 
 exec {'add_group_rvm_in_user_admin':
     unless   => 'grep -Ec rvm.*:admin /etc/group',
