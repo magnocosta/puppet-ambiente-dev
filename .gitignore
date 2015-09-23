@@ -1,5 +1,3 @@
 .DS_Store
-apps_php
-apps_preadly
-apps_ruby
+apps
 .vagrant
