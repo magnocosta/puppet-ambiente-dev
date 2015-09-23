@@ -22,3 +22,6 @@
 [submodule "modules/nginx"]
 	path = modules/nginx
 	url = https://github.com/magnocosta/puppet-nginx
+[submodule "modules/nodejs"]
+	path = modules/nodejs
+	url = https://github.com/magnocosta/puppet-nodejs
