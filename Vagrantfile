@@ -27,6 +27,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network :forwarded_port, guest: 3000,  host: 3000   #rails
     config.vm.network :forwarded_port, guest: 80,    host: 8080   #apache
     config.vm.network :forwarded_port, guest: 3306,  host: 3306   #mysql
+    config.vm.network :forwarded_port, guest: 5432,  host: 5432   #postgresql
+    config.vm.network :forwarded_port, guest: 1080,  host: 1080   #mailcatcher
     config.vm.provision "puppet" do |puppet|
       puppet.module_path = "modules"
       puppet.manifest_file = "dev_server.pp"
