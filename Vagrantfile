@@ -26,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network :forwarded_port, guest: 27017, host: 27017  #mongodb
     config.vm.network :forwarded_port, guest: 3000,  host: 3000   #rails
     config.vm.network :forwarded_port, guest: 80,    host: 8080   #apache
+    config.vm.network :forwarded_port, guest: 443,   host: 8443   #apache
     config.vm.network :forwarded_port, guest: 3306,  host: 3306   #mysql
     config.vm.network :forwarded_port, guest: 5432,  host: 5432   #postgresql
     config.vm.network :forwarded_port, guest: 1080,  host: 1080   #mailcatcher
