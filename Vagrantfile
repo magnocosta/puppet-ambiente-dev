@@ -6,17 +6,18 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    config.vm.provision :shell, :path => 'http://bit.ly/1vgzLDC'
-   config.vm.box = 'precise64'
-   config.vm.box_url = 'http://files.vagrantup.com/precise64.box'
+   config.vm.box = "ubuntu/xenial64"
+   # config.vm.box = 'precise64'
+   # config.vm.box_url = 'http://files.vagrantup.com/precise64.box'
 
-   config.vm.provider "virtualbox" do |v|
-    v.memory = 2048
-    v.cpus = 2
-    v.customize [
-      "setextradata", :id,
-      "VBoxInternal/Devices/ahci/0/LUN#[0]/Config/IgnoreFlush", "1"
-    ]
-   end
+   # config.vm.provider "virtualbox" do |v|
+   #  v.memory = 2048
+   #  v.cpus = 2
+   #  v.customize [
+   #    "setextradata", :id,
+   #    "VBoxInternal/Devices/ahci/0/LUN#[0]/Config/IgnoreFlush", "1"
+   #  ]
+   # end
 
    # thanks: http://jeremykendall.net/2013/08/09/vagrant-synced-folders-permissions/
   
